@@ -6,24 +6,28 @@
     <script src="jquery.min.js"></script>
     <style>
       body {
- background-color: #121464;
-}
+        background-color: #121464;
+       background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbYQ1Ls_AhO1z9llePZuiD3Ql_35-WOPfScCQI35BFOJAMlZosaFSO3oY:https://www.georgiaaquarium.org/wp-content/uploads/2019/08/moon-jelly-2.jpg&s=10");
+       
+      }
       .box {
         width: 70px;
         height: 70px;
         background-color: rgb(51, 66, 222);
-        font-size: 300%;
+        font-size: 300%;;
         text-align: center;
-        user-select: none;
         display: block;
         position: absolute;
+        user-select: none;
         top: 100px;
         /* Change me! */
         left: 0px;
       }
 
       .board {
-        height: 100vh;
+        height: 97vh;
+        width: 87vh;
+        
       }
     </style>
     <!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -73,13 +77,14 @@
         //////////////////////////////////////////////////////////////////
 
         // TODO 2 - Variable declarations
-        var boardHeight = jQuery(window).height();
+        var boardHeight = jQuery(window).height();    
       var positionX = 0;
       var points = 0;
       var speed = 10;
       var positionY = 0;
       var speedY = 10;
        var randNum = Math.random() * 50;
+      
         /**
          * This Function will be called 20 times/second.
          * Each time it is called, it should move the Box to a new location.
@@ -94,7 +99,7 @@
   box.css("left", newPositionX);
   box.css("top", newPositionY);
     });
-        
+       
           moveBoxTo(positionX, positionY);
           if (positionX > boardWidth){
             speed *= -1;
@@ -126,7 +131,7 @@
           points += 1;
           changeBoxText(points);
         speed = 3 * points + 10;
-
+        
 
         }
         
