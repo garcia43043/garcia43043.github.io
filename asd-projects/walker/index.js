@@ -107,18 +107,18 @@ $("#walker").css("top", walker.y);
 }
 
 function wallCollision(){
+
   if(walker.x < 0){
-    walker.x -= walker.speedX
+    walker.x = 0
   }
-  if(walker.x > $("#board").width()){
-    walker.x -= walker.speedX
+  if(walker.x + $("#walker").width() > $("#board").width()){
+    walker.x = $("#board").width() - $("#walker").width()
   }
    if(walker.y < 0){
-    walker.y -= walker.speedY
+    walker.y = 0;
   }
-  if(walker.y > $("#board").height()){
-    walker.y -= walker.speedY
+  if(walker.y + $("#walker").height() > $("#board").height()){
+    walker.y = $("#board").height() - $("#walker").height()  
   }
 }
-
 }
